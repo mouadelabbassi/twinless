@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twinless"
+version = "0.1.0"
+description = "TWINLESS: experimental world-model discrepancy and diagnostic probes for a simulated DC microgrid."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "TWINLESS Hackathon Team"}]
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+meta = ["openai>=1.50"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

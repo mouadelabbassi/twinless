@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "project": "TWINLESS",
+    "phase": "Day-1 deterministic research baseline",
+    "seed": 7,
+    "noise_std": 0.0,
+    "physics_limit": "Toy steady-state resistive DC approximation, not an AC safety model",
+    "uses_meta_model": false
+  },
+  "observation": {
+    "documented_pump_voltage": 10.3,
+    "measured_pump_voltage": 11.4,
+    "residual_voltage": 1.1
+  },
+  "hypotheses": {
+    "documented_topology": 0.0,
+    "undocumented_bypass": 0.5,
+    "sensor_bias_only": 0.5
+  },
+  "experiment": {
+    "probe": "increase_pump_load",
+    "clinic_current_amps": 1.5,
+    "pump_current_amps": 1.6,
+    "observed_voltage": 11.16706
+  },
+  "posterior": {
+    "documented_topology": 0.0,
+    "undocumented_bypass": 1.0,
+    "sensor_bias_only": 0.0
+  },
+  "best_supported_model": "undocumented_bypass",
+  "ground_truth_for_evaluator_only": "undocumented_bypass",
+  "limitations": [
+    "Single constructed fixture; no performance claims or empirical generalization.",
+    "No independent action synthesis, intervention validation, or Meta model integration yet.",
+    "Inadmissible physical control is out of scope; probes are simulated only."
+  ]
+}
